@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deixe sua mensagem – Minha Bebê</title>
-    <link rel="stylesheet" href="mensagem.css" />
+    <link rel="stylesheet" href="assets/css/mensagem.css" />
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             <label for="nome">Seu nome</label>
             <input type="text" id="nome" name="nome" required aria-required="true" autocomplete="name"
                 placeholder="Digite seu nome" />
-                
+
             <label for="mensagem">Mensagem</label>
             <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true"
                 placeholder="Escreva sua mensagem aqui..."></textarea>
@@ -30,22 +30,7 @@
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script>
-        const form = document.getElementById("mensagemForm");
-        form.addEventListener("submit", function (e) {
-            e.preventDefault(); // impede envio imediato
-            confetti({
-                particleCount: 700,
-                spread: 110,
-                origin: { y: 0.6 }
-            });
-
-            // redireciona após 3,5 segundo
-            setTimeout(() => {
-                window.location.href = "agradecimento.html";
-            }, 3500);
-        });
-    </script>
+    <script src="assets/js/confetti.js"></script>
 
 </body>
 
