@@ -89,6 +89,7 @@ textarea {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  resize: none;
 }
 
 /* Botão */
@@ -132,6 +133,6 @@ textarea {
     font-size: 1em;
    width: 100%;
   max-width: 100%;
-  box-sizing: border-box;
+  box-sizing: none;
   }
 }
