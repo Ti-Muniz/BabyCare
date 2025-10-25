@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Bebê - Catarina C. M.</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <a href="index.html" class="logo" aria-label="Voltar para a página inicial">🌸 Minha Bebê</a>
+        <nav>
+            <a href="mensagem.html" class="cta-button" role="button">Deixe sua mensagem</a>
+            <a href="login.html" class="cta-button" role="button">Login</a>
+        </nav>
+    </header>
+
+    <!-- Introdução -->
+    <section class="intro">
+        <h1>Bem-vindo ao nosso cantinho de amor 💕</h1>
+        <p>
+            Este site foi criado com muito carinho para celebrar os primeiros passos, sorrisos e descobertas da nossa
+            bebê. Aqui você encontrará fotos, histórias e momentos especiais que queremos guardar para sempre — e
+            compartilhar com quem amamos.
+        </p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>Projeto pessoal – Tiago Muniz.</p>
+        <h5>28.10.2025</h5>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button onclick="scrollToTop()" class="back-to-top" id="backToTop">↑ Voltar ao topo</button>
+
+    <!-- Scripts -->
+    <script>
+        const backToTopButton = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                backToTopButton.classList.add("show");
+            } else {
+                backToTopButton.classList.remove("show");
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>

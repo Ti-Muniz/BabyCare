@@ -1,0 +1,179 @@
+/* Estilo base do corpo da página */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #0a2540;
+  color: rgb(212, 209, 209);
+}
+
+/* Logo do site */
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(212, 209, 209);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.logo:hover {
+  background-color: #6d6c8d;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/* Botões de chamada para ação */
+.cta-button {
+  background-color: #0a2540;
+  color: rgb(212, 209, 209);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #6d6c8d;
+}
+
+/* Seção de introdução */
+.intro {
+  padding: 80px 40px;
+  background-color: #ffffff;
+  text-align: center;
+  animation: fadeInUp 2s ease-out;
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #0a2540;
+}
+
+.intro p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Botão "Voltar ao topo" */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #1d344b;
+  color: rgb(212, 209, 209);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 18px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  background-color: #6d6c8d;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #0a2540;
+  color: rgb(212, 209, 209);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.95em;
+  margin-top: 60px;
+}
+
+/* Animação de entrada suave */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .intro h1 {
+    font-size: 2em;
+  }
+
+  .intro p {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .intro {
+    padding: 60px 20px;
+  }
+
+  .intro h1 {
+    font-size: 1.6em;
+  }
+
+  .intro p {
+    font-size: 0.95em;
+  }
+}
