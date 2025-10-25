@@ -1,9 +1,24 @@
-/* Reset e fonte */
-body {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9fb;
 }
+
+
+/* Reset e fonte */
+/* body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9fb;
+} */
 
 /* Cabeçalho padrão */
 .topo-simples {
@@ -32,10 +47,10 @@ body {
   background-color: #6d6c8d;
 }
 
-/* Container da mensagem */
-.mensagem-container {
+/*Container da mensagem */
+ .mensagem-container {
   background-color: #ffffff;
-  padding: 40px;
+  padding: 40px 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 500px;
@@ -55,6 +70,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+   width: 100%;
 }
 
 label {
@@ -69,7 +85,10 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1em;
-  resize: none;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Botão */
@@ -94,6 +113,8 @@ textarea {
 @media (max-width: 480px) {
   .mensagem-container {
     padding: 30px 20px;
+    margin: 40px auto;
+    display: block;
   }
 
   .logo {
@@ -104,5 +125,13 @@ textarea {
   .cta-button {
     width: 100%;
     text-align: center;
+  }
+
+  input,
+  textarea {
+    font-size: 1em;
+   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   }
 }

@@ -53,6 +53,7 @@ nav a {
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
+  justify-content: center;
 }
 
 .cta-button:hover {
@@ -193,6 +194,7 @@ nav a {
   .cta-button {
     width: 100%;
     text-align: center;
+    width: auto;
   }
 
   .intro {

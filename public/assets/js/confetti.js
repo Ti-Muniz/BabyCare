@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
         form.addEventListener("submit", function (e) {
             e.preventDefault(); // impede envio imediato
             confetti({
-                particleCount: 700,
-                spread: 110,
+                particleCount: 1000,
+                spread: 70,
                 origin: { y: 0.6 }
             });
 

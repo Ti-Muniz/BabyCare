@@ -1,5 +1,13 @@
-body {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9fb;
   display: flex;
@@ -7,6 +15,7 @@ body {
   align-items: center;
   height: 100vh;
 }
+
 
 .agradecimento-container {
   background-color: #ffffff;
