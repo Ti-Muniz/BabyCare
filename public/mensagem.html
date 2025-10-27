@@ -12,7 +12,7 @@
 
     <!-- Cabeçalho padrão -->
     <header class="topo-simples">
-        <a href="../index.html" class="logo" aria-label="Voltar para a página inicial">🌸 Minha Bebê</a>
+        <a href="/" class="logo" aria-label="Voltar para a página inicial">🌸 Minha Bebê</a>
     </header>
 
     <!-- Container da mensagem -->
@@ -31,6 +31,32 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="assets/js/confetti.js"></script>
+    <script>
+        document.getElementById('mensagemForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            fetch('http://localhost:3000/mensagem', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nome, mensagem })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.sucesso) {
+                        alert('Mensagem enviada com sucesso!');
+                    } else {
+                        alert('Erro ao enviar mensagem.');
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                    alert('Erro na conexão com o servidor.');
+                });
+        });
+    </script>
 
 </body>
 
